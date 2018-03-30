@@ -3,8 +3,53 @@ img {
     width: 200px;
 }
 
+img.top-melons {
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #66ff33;
+}
+
+div.homepage {
+
+    text-align: center;
+}
+
+
+body {background-color: #FDE0B4}
+
 .melon-div {
     display: inline-block;
     padding: 10px;
     width: 205px;
+}
+
+{
+    color: #ff0000
+    font-family: sans-serif
+}
+
+h2 {
+    color: #ff0000
+    font-family: sans-serif
+}
+
+h3 {
+    color: #ff0000
+    font-family: sans-serif
+}
+
+h4 {
+    color: #ff0000
+    font-family: sans-serif
+}
+
+h5 {
+    color: #ff0000
+    font-family: sans-serif
+}
+
+h6 {
+    color: #ff0000
+    font-family: sans-serif
 }
