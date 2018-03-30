@@ -5,14 +5,39 @@
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
+    <form>
+    First Name: <input type="text" name="firstname">
+    <br>
+    Last Name: <input type="text" name="lastname">
+    <br>
+    Melon Type:
+        <select name="melontype">
+            <option value="watermelon">Watermelon</option>
+            <option value="honeydew">Honeydew</option>
+            <option value="canteloupe">Canteloupe</option>
+            <option value="crenshaw">Crenshaw</option>
+            <option value="canary">Canary</option>
+        </select>
+            <br>
+    Quantity*: <input type="text" name="quantity">
+    <br>
+    Delivery Time: <input type="radio" name ="ampm"value="12:00am-12:00pm">
 
+
+        </form>
+    <h1> Welcome, {{ name }} </h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
+{% for VAR in DICT %}
+
+    {% for compliment in compliments %}
     <div class='melon-div'>
-        <h3>Texas Golden Watermelon</h3>
-        <h2>Loved 598 times.</h2>
-        <img src='http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg'>
+        <h3>{{ name }}, this is a {{ melon_name }}</h3>
+        <h2>{{ melon_loved }}</h2>
+        <img src={{ melon_image }}>
     </div>
 
 
 </body>
 </html>
+
+{% endfor %}
