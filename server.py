@@ -60,6 +60,7 @@ def user_name():
 
 if __name__ == "__main__":
 
+    #TEST
     
     # We have to set debug=True here, since it has to be True at the
     # point that we invoke the DebugToolbarExtension
