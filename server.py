@@ -35,7 +35,28 @@ MOST_LOVED_MELONS = {
 }
 
 # YOUR ROUTES GO HERE
+from flask import render_template
 
+@app.route('/top-melons')
+def top_melons(MOST_LOVED_MELONS):
+    """render the top-melons.html template"""
+
+    melon_name = request.args.get("melon_name")
+    melon_image = request.args.get("img")
+    melon_loved = request.args.get("num+num_loves")
+
+    {% if session['get_name'] %}
+        return render_template("top-melons.html")
+    {% else %}
+        return redirect("/top-melons")
+
+@app.route('/get-name')
+def user_name():
+    """set user's name in session"""
+
+    session['get_name'] = request.args.get("name")
+
+    return redirect("/homepage")
 
 if __name__ == "__main__":
     # We have to set debug=True here, since it has to be True at the
