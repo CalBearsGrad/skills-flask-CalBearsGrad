@@ -45,9 +45,9 @@ def top_melons(MOST_LOVED_MELONS):
     melon_image = request.args.get("img")
     melon_loved = request.args.get("num+num_loves")
 
-    {% if session['get_name'] %}:
+    if session['get_name']:
         return render_template("top-melons.html")
-    {% else %}
+    else:
         return redirect("/top-melons")
 
 @app.route('/get-name')
