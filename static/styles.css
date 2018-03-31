@@ -3,18 +3,19 @@ img {
     width: 200px;
 }
 
-img.top-melons {
+img {
 
     border-width: 2px;
     border-style: solid;
     border-color: #66ff33;
 }
 
-div.homepage {
-
-    text-align: center;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
 
 body {background-color: #FDE0B4}
 
@@ -24,7 +25,7 @@ body {background-color: #FDE0B4}
     width: 205px;
 }
 
-{
+h1 {
     color: #ff0000
     font-family: sans-serif
 }

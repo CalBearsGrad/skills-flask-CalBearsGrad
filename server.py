@@ -58,7 +58,7 @@ def top_melons():
         return redirect("/top-melons")
 
 @app.route('/get-name')
-def get_name():
+def get_eename():
     """set user's name in session"""
 
     session['get_name'] = request.args.get("name")
@@ -76,4 +76,4 @@ if __name__ == "__main__":
     # Use the DebugToolbar
     DebugToolbarExtension(app)
 
-    app.run(host="0.0.0.0")
+    app.run(host=http://"0.0.0.0")

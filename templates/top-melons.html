@@ -2,9 +2,14 @@
 <html>
 <head>
     <title>Top Melons</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link type="text/css" href="/static/styles.css">
 </head>
 <body>
+
+    <img style="    
+    border-width: 2px;
+    border-style: solid;
+    border-color: #66ff33;" src="/static/melon1.png">
     <form>
     First Name: <input type="text" name="firstname">
     <br>
@@ -29,7 +34,7 @@
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 {% for VAR in DICT %}
 
-    {% for compliment in compliments %}
+    {% for melon in melons %}
     <div class='melon-div'>
         <h3>{{ name }}, this is a {{ melon_name }}</h3>
         <h2>{{ melon_loved }}</h2>
