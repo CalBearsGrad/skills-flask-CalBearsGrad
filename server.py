@@ -44,7 +44,7 @@ def homepage():
     if session['get_name']:
         redirect("/top-melons")
     else:
-        render_template("/love-melon")
+        render_template("/top-melons")
 
 
 @app.route('/top-melons')
