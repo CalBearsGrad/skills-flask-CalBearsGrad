@@ -4,41 +4,34 @@
     <title>Top Melons</title>
     <link type="text/css" href="/static/styles.css">
 </head>
-<body>
+<body class="body">
 
-    <img style="    
-    border-width: 2px;
-    border-style: solid;
-    border-color: #66ff33;" src="/static/melon1.png">
-    <form>
+    <img class="melonimg" src="/static/melon1.png">
+    <form action="{{ /love-melon }}" method="post">
     First Name: <input type="text" name="firstname">
+    <input type="submit">
     <br>
     Last Name: <input type="text" name="lastname">
+    <input type="submit" value="/love-melon">
     <br>
     Melon Type:
         <select name="melontype">
-            <option value="watermelon">Watermelon</option>
-            <option value="honeydew">Honeydew</option>
-            <option value="canteloupe">Canteloupe</option>
-            <option value="crenshaw">Crenshaw</option>
-            <option value="canary">Canary</option>
+            <option value="cren">Crenshaw</option>
+            <option value="jubi">Junilee Watermelon</option>
+            <option value="sugb">Sugar Baby Watermelon</option>
+            <option value="texb">Texas Golden Watermelon</option>
         </select>
             <br>
-    Quantity*: <input type="text" name="quantity">
-    <br>
-    Delivery Time: <input type="radio" name ="ampm"value="12:00am-12:00pm">
-
-
         </form>
-    <h1> Welcome, {{ name }} </h1>
+    <h1 class="heading"> Welcome, {{ name }} </h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 {% for VAR in DICT %}
 
     {% for melon in melons %}
     <div class='melon-div'>
-        <h3>{{ name }}, this is a {{ melon_name }}</h3>
-        <h2>{{ melon_loved }}</h2>
-        <img src={{ melon_image }}>
+        <h3 class="heading">{{ name }}, this is a {{ melon_name }}</h3>
+        <h2 class="heading">{{ melon_loved }}</h2>
+        <img class="melonimg" src={{ melon_image }}>
     </div>
 
 

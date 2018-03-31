@@ -53,7 +53,7 @@ def top_melons():
     melon_loved = request.args.get("num+num_loves")
 
     if session['get_name']:
-        return render_template("top-melons.html")
+        return render_template("/love-melon.html")
     else:
         return redirect("/top-melons")
 
@@ -64,6 +64,12 @@ def get_eename():
     session['get_name'] = request.args.get("name")
 
     return redirect("/homepage.html")
+
+@app.route('/love-melon')
+def love_melon():
+    """will post request from top-melons"""
+
+    return redirect("/love-melon")
 
 if __name__ == "__main__":
 

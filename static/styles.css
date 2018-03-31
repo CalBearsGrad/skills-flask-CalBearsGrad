@@ -3,7 +3,7 @@ img {
     width: 200px;
 }
 
-img {
+.melonimg {
 
     border-width: 2px;
     border-style: solid;
@@ -17,7 +17,9 @@ img {
     width: 50%;
 }
 
-body {background-color: #FDE0B4}
+.body {
+    background-color: #FDE0B4
+}
 
 .melon-div {
     display: inline-block;
@@ -25,32 +27,7 @@ body {background-color: #FDE0B4}
     width: 205px;
 }
 
-h1 {
-    color: #ff0000
-    font-family: sans-serif
-}
-
-h2 {
-    color: #ff0000
-    font-family: sans-serif
-}
-
-h3 {
-    color: #ff0000
-    font-family: sans-serif
-}
-
-h4 {
-    color: #ff0000
-    font-family: sans-serif
-}
-
-h5 {
-    color: #ff0000
-    font-family: sans-serif
-}
-
-h6 {
+.heading {
     color: #ff0000
     font-family: sans-serif
 }
