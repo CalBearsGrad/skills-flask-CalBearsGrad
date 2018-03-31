@@ -42,9 +42,9 @@ def homepage():
     """render the homepage.html template"""
 
     if session['get_name']:
-        redirect("/top-melons")
+        redirect("/top-melons.html")
     else:
-        render_template("/top-melons")
+        render_template("/top-melons.html")
 
 
 @app.route('/top-melons')
