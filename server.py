@@ -44,11 +44,11 @@ def homepage():
     if session['get_name']:
         return render_template("love-melon.html")
     else:
-        return redirect("/top-melons")
+        return redirect("/")
 
 
 @app.route('/top-melons')
-def top_melons(dictionary):
+def top_melons():
     """Return page showing the details of a given melon.
 
     Show all info about a melon.
