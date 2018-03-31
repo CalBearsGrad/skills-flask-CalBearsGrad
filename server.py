@@ -45,7 +45,7 @@ def homepage():
 
 
 @app.route('/top-melons')
-def top_melons(MOST_LOVED_MELONS):
+def top_melons():
     """render the top-melons.html template"""
 
     melon_name = request.args.get("melon_name")
@@ -58,7 +58,7 @@ def top_melons(MOST_LOVED_MELONS):
         return redirect("/top-melons")
 
 @app.route('/get-name')
-def user_name():
+def get_name():
     """set user's name in session"""
 
     session['get_name'] = request.args.get("name")
