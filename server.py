@@ -53,17 +53,17 @@ def top_melons():
     melon_loved = request.args.get("num+num_loves")
 
     if session['get_name']:
-        return render_template("/love-melon.html")
+        return render_template("love-melon.html")
     else:
         return redirect("/top-melons")
 
 @app.route('/get-name')
-def get_eename():
+def get_name():
     """set user's name in session"""
 
     session['get_name'] = request.args.get("name")
 
-    return redirect("/homepage.html")
+    return redirect("/")
 
 @app.route('/love-melon')
 def love_melon():
