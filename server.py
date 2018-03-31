@@ -41,10 +41,7 @@ from flask import render_template
 def homepage():
     """render the homepage.html template"""
 
-    if session['get_name']:
-        return render_template("love-melon.html")
-    else:
-        return redirect("/")
+    return render_template("homepage.html")
 
 
 @app.route('/top-melons')
