@@ -56,9 +56,9 @@ def user_name():
 
     session['get_name'] = request.args.get("name")
 
-    return redirect("/")
+    return redirect("/homepage.html")
 
-
+if __name__ == "__main__":
 
     #TEST
 
@@ -68,5 +68,5 @@ def user_name():
 
     # Use the DebugToolbar
     DebugToolbarExtension(app)
-if __name__ == "__main__":
+
     app.run(host="0.0.0.0")
