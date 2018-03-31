@@ -45,15 +45,13 @@ h6 {
 
         <h1 class="heading">Please fill in your name</h1>
 
-        <form action="/get-name">
+        <form action="{{ /top-melon }}" method="get">
 
             What's your name?
             
-            <input type="text" name = request.form["name"] required><br>
-
-            <input type="submit">
-
-
+            <input type="text" name = request.form["person"] required>
+            <br>
+            <input type="submit" value="/top-melon">
         </form>
 
     </div>

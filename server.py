@@ -41,21 +41,31 @@ from flask import render_template
 def homepage():
     """render the homepage.html template"""
 
-    return render_template("homepage.html")
-
-
-@app.route('/top-melons')
-def top_melons():
-    """render the top-melons.html template"""
-
-    melon_name = request.args.get("melon_name")
-    melon_image = request.args.get("img")
-    melon_loved = request.args.get("num+num_loves")
-
     if session['get_name']:
         return render_template("love-melon.html")
     else:
         return redirect("/top-melons")
+
+
+@app.route('/top-melons')
+def top_melons(dictionary):
+    """Return page showing the details of a given melon.
+
+    Show all info about a melon.
+    """
+
+    melon_name = request.args.get("MOST_LOVED_MELONS['name']")
+    melon_image = request.args.get("MOST_LOVED_MELONS['img']")
+    melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
+
+    return"""
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>{{ melon_name }}<title>
+    """
+    render_template("top-melons.html")
+
 
 @app.route('/get-name')
 def get_name():

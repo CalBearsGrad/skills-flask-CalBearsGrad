@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Top Melons</title>
-    <link type="text/css" href="/static/styles.css">
-</head>
-<body class="body">
+{% extends 'base.html' %}
+
+{% block body %}
 
     <img class="melonimg" src="/static/melon1.png">
     <form action="{{ /love-melon }}" method="post">
@@ -13,7 +9,7 @@
     Last Name: <input type="text" name="lastname">
     <input type="submit" value="/love-melon">
     <br>
-    Melon Type:
+    Please pick your Melon Type:
         <select name="melontype">
             <option value="cren">Crenshaw</option>
             <option value="jubi">Junilee Watermelon</option>
@@ -23,16 +19,42 @@
             <br>
             <input type="submit">
         </form>
+
+<html>
+<head>
+    <title>Top Melons</title>
+    <link type="text/css" href="/static/styles.css">
+</head>
+<body class="body">
+
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
-{% for VAR in DICT %}:
-    <div>
-        <h2 class="heading">{{ name }}, this is a {{ melon_name }}</h2>
-        <h3 class="heading">{{ melon_loved }}</h3>
-        <img class="melonimg" src={{ melon_image }}>
+{% for KEY in MOST_LOVED_MELON}
+
+    <h1 class="heading">Top Melons</h1>
+
+    <div >
+
+        <div>
+            <img class="melonimg" src="{{ melon_img }}">
+        </div>
+
+        <div>
+            <div>
+                <h3 class="heading"></h3>
+                <p> Details on your most loved melons. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="melon-details">
+
+        <h3>Product details</h3>
+        <ul>
+            <li>Melon name: {{ melon_name }}</li>
+            <li>How many times folks have 'LOVED' this melon? {{ melon_loved }}</li>
+            
+        </ul>
     </div>
 
 
-</body>
-</html>
-
-{% endfor %}
+{% endblock %}
