@@ -37,6 +37,13 @@ MOST_LOVED_MELONS = {
 # YOUR ROUTES GO HERE
 from flask import render_template
 
+@app.route('/')
+def homepage():
+    """render the homepage.html template"""
+
+    return render_template("homepage.html")
+
+
 @app.route('/top-melons')
 def top_melons(MOST_LOVED_MELONS):
     """render the top-melons.html template"""
