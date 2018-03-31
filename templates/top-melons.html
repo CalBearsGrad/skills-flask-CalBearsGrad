@@ -9,7 +9,6 @@
     <img class="melonimg" src="/static/melon1.png">
     <form action="{{ /love-melon }}" method="post">
     First Name: <input type="text" name="firstname">
-    <input type="submit">
     <br>
     Last Name: <input type="text" name="lastname">
     <input type="submit" value="/love-melon">
@@ -22,15 +21,13 @@
             <option value="texb">Texas Golden Watermelon</option>
         </select>
             <br>
+            <input type="submit">
         </form>
-    <h1 class="heading"> Welcome, {{ name }} </h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
-{% for VAR in DICT %}
-
-    {% for melon in melons %}
-    <div class='melon-div'>
-        <h3 class="heading">{{ name }}, this is a {{ melon_name }}</h3>
-        <h2 class="heading">{{ melon_loved }}</h2>
+{% for VAR in DICT %}:
+    <div>
+        <h2 class="heading">{{ name }}, this is a {{ melon_name }}</h2>
+        <h3 class="heading">{{ melon_loved }}</h3>
         <img class="melonimg" src={{ melon_image }}>
     </div>
 
