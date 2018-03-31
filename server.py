@@ -58,14 +58,8 @@ def top_melons(dictionary):
     melon_image = request.args.get("MOST_LOVED_MELONS['img']")
     melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
 
-    return"""
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>{{ melon_name }}<title>
-    """
-    render_template("top-melons.html")
-
+    return render_template("top-melons.html")
+top_melons(MOST_LOVED_MELONS)
 
 @app.route('/get-name')
 def get_name():
