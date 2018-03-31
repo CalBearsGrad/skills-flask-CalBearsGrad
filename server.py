@@ -59,7 +59,6 @@ def top_melons(dictionary):
     melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
 
     return render_template("top-melons.html")
-top_melons(MOST_LOVED_MELONS)
 
 @app.route('/get-name')
 def get_name():
