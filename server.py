@@ -41,7 +41,7 @@ from flask import render_template
 def homepage():
     """render the homepage.html template"""
 
-    return render_template("homepage.html")
+    return redirect("/top-melons")
 
 
 @app.route('/top-melons')
