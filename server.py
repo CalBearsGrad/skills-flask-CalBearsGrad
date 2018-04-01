@@ -70,14 +70,14 @@ def top_melons():
     melon_name = MOST_LOVED_MELONS[key]["name"]
     melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
     melon_img = MOST_LOVED_MELONS[key]["img"]
-    person = session["person"]
+    person = request.args.get("person")
 
     if person:
         return render_template("/top-melons.html")
     else:
         return redirect("/homepage.html")
 
-    return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
+    return render_template("top-melons.html", person=request.args.get("person"),melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
 @app.route("/thank-you")
 def thank_you():

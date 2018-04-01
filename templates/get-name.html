@@ -1,20 +1,7 @@
-<!DOCTYPE html>
+{% extends from 'base.html' %}
+{% endblock %}
 
-<html>
-
-
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="/top-melons">Top Melons</a>
-  <a href="/loved-melons">Loved Melons</a>
-  <a href="/thank">Thank You</a>
-</div>
-
-<head>
-    <link href="./styles.css" type="text/css" rel="stylesheet">
-    <title>hi</title>
-</head>
-<body>
+<body class="body">
     <h1 class="heading">Thank you for providing your name.</h1>
     <h3 class="heading">Click the button to continue</h3>
     <form method="post" action="/top-melons.html">
