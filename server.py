@@ -48,13 +48,13 @@ def homepage():
         print session
     return render_template('/homepage.html')
 
-@app.route("/get-name", methods=["GET"])
+@app.route("/get-name", methods=["GET", "POST"])
 def get_name():
     """set user's name. Button redirects user to top-melons.html"""
     person=request.args.get("person")
 
     if person:
-        session[person] = {}
+        session[person] = {1}
         return redirect("/top-melons")
     else:
         return redirect("/")
