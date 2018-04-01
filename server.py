@@ -55,7 +55,6 @@ def get_name():
 
     if person:
         print session
-        flash("You're one stepped closer to your most loved melon!")
         return redirect("/top-melons")
     else:
         return redirect("/")
