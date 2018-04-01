@@ -12,7 +12,7 @@ so I had to delete them. Sorry.
       <a href="/thank-you">Thank You</a>
     </div>
 </head>
-<body class="body">
+<body background-color: #FF7F50; class="body">
     <h1 class="heading">Welcome {{ person }}!</h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
@@ -20,18 +20,34 @@ so I had to delete them. Sorry.
 
 {% for key, value in DICT.items() %}
     <div>
-        <h3 class="heading">{{ person }}, this is {{ DICT[key]["name"] }}</h3>
-        <h2>Loved {{ DICT[key]["num_loves"] }} times.
+        <h3 color: #DC143C;
+            font-family: sans-serif;
+            class="heading">{{ person }}, this is {{ DICT[key]["name"] }}</h3>
+        <h2
+            color: #DC143C;
+            font-family: sans-serif;>Loved {{ DICT[key]["num_loves"] }} times.
         </h2>
-        <img class="melonimg img" src={{ DICT[key]["img"] }}>
+        <img     
+            border-width: 2px;
+            border-style: solid;
+            border-color: #008000;
+            height: 200px;
+            width: 200px;
+            class="melonimg img" src={{ DICT[key]["img"] }}>
 {% endfor %}
+        <h2 color: #DC143C;
+            font-family: sans-serif;
+            class="heading">Just one word... </h2>
 {% for flavor in flavors %}
-        <h2 class="heading">Give Me A... </h2>
-        <h2 class="heading">{{ flavor }}</h2>
+        <h2 color: #DC143C;
+            font-family: sans-serif;
+            class="heading">{{ flavor }}</h2>
         <br>
     </div>
 {% endfor %}
-    <h2 class="heading">{{ flavors }}</h2>
+    <h2 color: #DC143C;
+            font-family: sans-serif;
+            class="heading">{{ flavors }}</h2>
 
 <!-- This used to be the end of the jinja for loop
  -->

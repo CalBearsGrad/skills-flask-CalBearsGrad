@@ -1,13 +1,10 @@
-.img {
-    height: 200px;
-    width: 200px;
-}
-
 .melonimg {
 
     border-width: 2px;
     border-style: solid;
     border-color: #008000;
+    height: 200px;
+    width: 200px;
 }
 
 .center {
