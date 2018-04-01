@@ -50,7 +50,6 @@ def top_melons():
 
     Show all info about a melon.
     """
-
     
     melon_name = MOST_LOVED_MELONS[key]["name"]
     melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
@@ -65,7 +64,7 @@ def get_name():
 
     session["person"] = request.args.get("person")
 
-    return redirect("/top-melons.html")
+    return redirect("/get-name.html")
 
 @app.route('/love-melon')
 def love_melon():
