@@ -1,7 +1,10 @@
+{ extends "base.html" %}
+{% block content %}
+
 
 {% for key in MOST_LOVED_MELONS %}
    {% for key, value in MOST_LOVED_MELONS.items() %}
-      <h1>Key: {{ key }}</h1>
+      <h1>Key: {{  }}</h1>
       <h2>Value: {{ value }}</h2>
    {% endfor %}
 {% endfor %}
@@ -27,3 +30,5 @@
             
         </ul>
     </div>
+
+{% endblock %}
