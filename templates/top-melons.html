@@ -2,7 +2,7 @@
 {% block content %}
 
 
-{% for key in MOST_LOVED_MELONS %}
+{% for key in MOST_LOVED_MELONS in server.py %}
    {% for key, value in MOST_LOVED_MELONS.items() %}
       <h1 classs="heading">The Name of this Melon is {{ melon_name }}</h1>
       
