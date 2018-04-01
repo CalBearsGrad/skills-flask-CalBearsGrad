@@ -1,4 +1,4 @@
-img {
+.img {
     height: 200px;
     width: 200px;
 }
@@ -28,7 +28,7 @@ img {
 }
 
 .heading {
-    color: #ff0000
+    color: #DC143C
     font-family: sans-serif
 }
 
