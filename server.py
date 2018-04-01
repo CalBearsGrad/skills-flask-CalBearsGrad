@@ -1,6 +1,7 @@
 from flask import Flask, redirect, request, render_template, session
 from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
+from random import Choice
 
 
 app = Flask(__name__)
