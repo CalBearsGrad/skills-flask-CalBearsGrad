@@ -50,11 +50,11 @@ def homepage():
         flash("You have successfully added your name!")
         return render_template('/homepage.html')
 
-@app.route("/get-name", methods=["GET"])
+@app.route("/get-name")
 def get_name():
     """set user's name in session"""
 
-    session["person"] = request.args.get("person")
+    #session["person"] = request.args.get("person")
 
     return render_template("/get-name.html")
 
