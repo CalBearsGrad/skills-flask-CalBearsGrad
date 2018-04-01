@@ -2,33 +2,3 @@
 {% block content %}
 
 
-{% for key in MOST_LOVED_MELONS in server.py %}
-   {% for key, value in MOST_LOVED_MELONS.items() %}
-      <h1 classs="heading">The Name of this Melon is {{ melon_name }}</h1>
-      
-   {% endfor %}
-{% endfor %}
-
-<h1 class="heading">Top Melons</h1>
-    <div >
-        <div>
-            <img class="melonimg" src="{{ melon_img }}">
-        </div>
-        <div>
-        <div>
-            <h3 class="heading"></h3>
-            <p> Details on your most loved melons. </p>
-            </div>
-        </div>
-    </div>
-    <div class="melon-details">
-
-        <h3>Product details</h3>
-        <ul>
-            <li>Melon name: {{ melon_name }}</li>
-            <li>How many times folks have 'LOVED' this melon? {{ melon_loved }}</li>
-            
-        </ul>
-    </div>
-
-{% endblock %}
