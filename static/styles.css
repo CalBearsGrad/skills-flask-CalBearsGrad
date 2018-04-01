@@ -7,7 +7,7 @@ img {
 
     border-width: 2px;
     border-style: solid;
-    border-color: #66ff33;
+    border-color: #008000;
 }
 
 .center {
@@ -18,7 +18,7 @@ img {
 }
 
 .body {
-    background-color: #FDE0B4
+    background-color: #FF7F50
 }
 
 .melon-div {
@@ -34,7 +34,7 @@ img {
 
 
 .topnav {
-    background-color: #FDE0B4;
+    background-color: #008000;
     overflow: hidden;
 }
 

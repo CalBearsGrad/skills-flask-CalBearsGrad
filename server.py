@@ -50,6 +50,13 @@ def homepage():
         flash("You have successfully added your name!")
         return render_template('/get-name.html')
 
+@app.route("/get-name", methods=["GET"])
+def get_name():
+    """set user's name in session"""
+
+    session["person"] = request.args.get("person")
+
+    return render_template("/get-name.html")
 
 
 @app.route("/top-melons", methods=["POST"])
@@ -66,13 +73,6 @@ def top_melons():
 
     return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
-@app.route("/get-name", methods=["GET"])
-def get_name():
-    """set user's name in session"""
-
-    session["person"] = request.args.get("person")
-
-    return redirect("/top-melons.html")
 
 @app.route("/love-melon")
 def love_melon():
