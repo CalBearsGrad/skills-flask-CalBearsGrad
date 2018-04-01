@@ -47,7 +47,7 @@ def homepage():
     else:
         session["person"] = person
         print session
-        return render_template('/get-name')
+        return render_template('/get-name.html')
 
 @app.route("/get-name", methods=["GET", "POST"])
 def get_name():
