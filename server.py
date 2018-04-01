@@ -42,7 +42,7 @@ def homepage():
     """render the homepage.html template"""
     if 'person' in session:
         print session
-        flash("You're one stepped closer to your most loved melon!")
+        print "You're one stepped closer to your most loved melon!"
         return redirect('/get-name')
     else:
         session['person'] = {}
