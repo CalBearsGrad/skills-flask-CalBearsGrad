@@ -51,10 +51,10 @@ def top_melons():
     Show all info about a melon.
     """
     
-    melon_name = MOST_LOVED_MELONS[key]["name"]
-    melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
-    melon_img = MOST_LOVED_MELONS[key]["img"]
-    person = session["person"]
+    # melon_name = MOST_LOVED_MELONS[key]["name"]
+    # melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
+    # melon_img = MOST_LOVED_MELONS[key]["img"]
+    # person = session["person"]
 
     return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
@@ -73,8 +73,6 @@ def love_melon():
     return redirect("/love-melon")
 
 if __name__ == "__main__":
-
-    #TEST
 
     # We have to set debug=True here, since it has to be True at the
     # point that we invoke the DebugToolbarExtension
