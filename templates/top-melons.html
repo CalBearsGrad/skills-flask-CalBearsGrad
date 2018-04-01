@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
-
+    <h1 class="heading">Welcome {{ session["person"] }}!</h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
 {% for key, value in _dict.iteritems() %}

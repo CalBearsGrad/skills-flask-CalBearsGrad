@@ -64,9 +64,9 @@ def top_melons():
 def get_name():
     """set user's name in session"""
 
-    session['get_name'] = request.args.get("name")
+    session["person"] = request.args.get("person")
 
-    return redirect("/")
+    return redirect("/top-melons")
 
 @app.route('/love-melon')
 def love_melon():
