@@ -40,21 +40,21 @@ from flask import render_template
 @app.route("/", methods=["GET"])
 def homepage():
     """render the homepage.html template. Button redirects user to get-name.html"""
-    
+    person=request.args.get("person")
+
     if session["person"]:
         return redirect("/top-melons")
     else:
-        session['person'] = {}
+        session["person"] = person
         print session
-    return render_template('/homepage.html')
+        return render_template('/get-name')
 
 @app.route("/get-name", methods=["GET", "POST"])
 def get_name():
     """set user's name. Button redirects user to top-melons.html"""
     person=request.args.get("person")
 
-    if person:
-        session[person] = {}
+    if session["person"]:
         return redirect("/top-melons")
     else:
         return redirect("/get-name")
