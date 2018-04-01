@@ -41,7 +41,6 @@ from flask import render_template
 def homepage():
     """render the homepage.html template"""
 
-
     return render_template("/homepage.html")
 
 
@@ -56,9 +55,9 @@ def top_melons():
     melon_name = MOST_LOVED_MELONS[key]["name"]
     melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
     melon_img = MOST_LOVED_MELONS[key]["img"]
+    person = session["person"]
 
-    print melon_name
-    return render_template("top-melons.html", melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
+    return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
 @app.route('/get-name')
 def get_name():
