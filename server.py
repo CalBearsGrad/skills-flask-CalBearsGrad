@@ -72,7 +72,7 @@ def top_melons():
         melon_img = MOST_LOVED_MELONS[key]["img"]
         person = request.args.get("person")
 
-    if person:
+    if person or session["person"]:
         return render_template("/top-melons.html")
     else:
         return redirect("/homepage")
