@@ -58,7 +58,7 @@ def get_name():
         flash("You're one stepped closer to your most loved melon!")
         return redirect("/top-melons")
     else:
-        return redirect("/homepage")
+        return redirect("/")
 
 
 @app.route("/top-melons", methods=["POST"])
