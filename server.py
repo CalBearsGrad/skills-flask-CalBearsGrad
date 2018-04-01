@@ -44,10 +44,10 @@ def homepage():
 
     if session["person"]:
         return redirect("/top-melons")
-    else:
-        session["person"] = person
-        print session
+    elif session["person"] = None:
         return render_template('/get-name.html')
+    else:
+        return render_template("/homepage.html")
 
 @app.route("/get-name", methods=["GET", "POST"])
 def get_name():
