@@ -60,7 +60,7 @@ def get_name():
         return redirect("/")
 
 
-@app.route("/top-melons", methods=["POST"])
+@app.route("/top-melons", methods=["GET", "POST"])
 def top_melons():
     """Return page showing the details of a given melon.
 
