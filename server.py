@@ -54,7 +54,7 @@ def get_name():
     person=request.args.get("person")
 
     if person:
-        session[person] = {1}
+        session[person] = {}
         return redirect("/top-melons")
     else:
         return redirect("/")
