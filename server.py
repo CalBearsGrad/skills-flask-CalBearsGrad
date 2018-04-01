@@ -75,7 +75,7 @@ def top_melons():
     if person:
         return render_template("/top-melons.html")
     else:
-        return redirect("/homepage.html")
+        return redirect("/homepage")
 
     return render_template("top-melons.html", person=request.args.get("person"),melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
