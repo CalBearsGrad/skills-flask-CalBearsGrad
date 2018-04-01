@@ -60,9 +60,7 @@ def top_melons():
 
     for value in MOST_LOVED_MELONS:
 
-        <div>
         <img class="melonimg" src="{{ melon_img }}">
-        </div>
         <div>
         <div>
             <h3 class="heading"></h3>
