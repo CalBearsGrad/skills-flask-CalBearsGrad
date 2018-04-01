@@ -47,12 +47,12 @@ h6 {
         <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
 
         <h1 class="heading">Please fill in your name</h1>
-        </form>
+        <form action="/get-name">
 
-            What's your name?            
-                <input type="text" value="person" text" = session["person"] required>
+     What's your name?
+     <input type="text" name="person"><br>
             <br>
-        <form method="post" action="/get-name.html">
+        <form method="post" action="/get-name">
         <button type="submit">Continue</button>
         </form>
 
