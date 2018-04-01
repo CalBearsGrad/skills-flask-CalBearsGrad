@@ -66,11 +66,11 @@ def top_melons():
 
     Show all info about a melon.
     """
-    
-    melon_name = MOST_LOVED_MELONS[key]["name"]
-    melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
-    melon_img = MOST_LOVED_MELONS[key]["img"]
-    person = request.args.get("person")
+    for key in MOST_LOVED_MELONS:
+        melon_name = MOST_LOVED_MELONS[key]["name"]
+        melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
+        melon_img = MOST_LOVED_MELONS[key]["img"]
+        person = request.args.get("person")
 
     if person:
         return render_template("/top-melons.html")
