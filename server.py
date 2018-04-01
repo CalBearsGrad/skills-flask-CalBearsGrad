@@ -41,7 +41,7 @@ from flask import render_template
 def homepage():
     """render the homepage.html template"""
     
-        return render_template('/homepage.html')
+    return render_template('/homepage.html')
 
 @app.route("/get-name", methods=["GET"])
 def get_name():
@@ -50,7 +50,7 @@ def get_name():
     if "person" in session:
         print session
         flash("You're one stepped closer to your most loved melon!")
-        
+
     else:
         session['person'] = {}
         print session
