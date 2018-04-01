@@ -33,6 +33,9 @@ MOST_LOVED_MELONS = {
         'num_loves': 598,
     },
 }
+
+Flavors = ["Scrumdeliyumtious", "Fantabulous", "Delectable", "Mouthwatering"]
+
 from flask import render_template
 # YOUR ROUTES GO HERE
 
@@ -66,19 +69,15 @@ def top_melons():
     Show all info about a melon.
     """
     for key in MOST_LOVED_MELONS:
-        melon_name = MOST_LOVED_MELONS[key]["name"]
-        melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
-        melon_img = MOST_LOVED_MELONS[key]["img"]
         person = request.args.get("person")
         DICT = MOST_LOVED_MELONS
+        nice_thing = choice(Flavors)
 
     if person or session["person"]:
         return render_template("top-melons.html", 
             person=request.args.get("person"),
-            melon_name=MOST_LOVED_MELONS[key]["name"], 
-            melon_loved=MOST_LOVED_MELONS[key]["num_loves"], 
-            melon_img=MOST_LOVED_MELONS[key]["img"],
-            DICT=MOST_LOVED_MELONS)
+            DICT=MOST_LOVED_MELONS,
+            flavor=nice_thing)
     else:
         person="Good-looking"
         return render_template("top-melons.html", 
