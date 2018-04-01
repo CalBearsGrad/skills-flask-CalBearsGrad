@@ -3,11 +3,17 @@
 {{ super() }}
 {% endblock %}
 <body class="body">
-    <h1 class="heading">Thank you {{ person }} for providing your name.</h1>
-    <h3 class="heading">Click the button to continue</h3>
-    <form method="post" action="/top-melons.html">
-        <button type="submit">Continue</button>
-        </form>
+    <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
+
+    <h1 class="heading">Please fill in your name</h1>
+    <form action="/get-name">
+
+    What's your name? For REAL this time ...
+    <input type="text" name="person"><br>
+    <br>
+    <form method="post" action="/top-melons">
+    <button type="submit">Continue</button>
+    </form>
     <img class="melonimg center" src="http://www.rareseeds.com/assets/1/14/DimThumbnail/Sugar-Baby-Watermelon-web.jpg" alt="cantaloupe">
 </body>
 </html>

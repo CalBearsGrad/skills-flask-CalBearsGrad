@@ -57,7 +57,7 @@ def get_name():
         session[person] = {}
         return redirect("/top-melons")
     else:
-        return redirect("/")
+        return redirect("/get-name")
 
 
 @app.route("/top-melons", methods=["GET", "POST"])
