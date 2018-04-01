@@ -73,12 +73,20 @@ def top_melons():
         person = request.args.get("person")
 
     if person or session["person"]:
-        return render_template("/top-melons.html")
+        return render_template("top-melons.html", 
+            person=request.args.get("person"),
+            melon_name=MOST_LOVED_MELONS[key]["name"], 
+            melon_loved=MOST_LOVED_MELONS[key]["num_loves"], 
+            melon_img=MOST_LOVED_MELONS[key]["img"])
     else:
-        return redirect("/homepage")
+        session["person"] = request.args.get("person")
+        return render_template("top-melons.html", 
+            person=request.args.get("person"),
+            melon_name=MOST_LOVED_MELONS[key]["name"], 
+            melon_loved=MOST_LOVED_MELONS[key]["num_loves"], 
+            melon_img=MOST_LOVED_MELONS[key]["img"])
 
-    return render_template("top-melons.html", person=request.args.get("person"),melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
-
+    
 @app.route("/thank-you")
 def thank_you():
     """Return thank-you.html for visiting Ubermelon"""
