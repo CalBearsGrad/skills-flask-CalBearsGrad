@@ -3,11 +3,17 @@
 Extending base.html kept throwing errors even when commented out 
 so I had to delete them. Sorry. 
  -->
+<!DOCTYPE html>
+<head>
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+
+</head>
 <body class="body">
     <h1 class="heading">Welcome {{ person }}!</h1>
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
 <!-- This for loop kept throwing errors in the debugger, so I commented it out. It continued to throw errors so I had to delete it :( -->
+    {% for item in items %}
     <div>
         <h3 class="heading">{{ person }}, this is {{ melon_name }}</h3>
         <h2>Loved {{ melon_loved }} times.
@@ -16,13 +22,14 @@ so I had to delete them. Sorry.
         <h2 class="heading">Just one word ... YUM</h2>
         <br>
     </div>
+    {% endfor %}
 <!-- This used to be the end of the jinja for loop
  -->
     <form method="post" action="/thank-you">
         <button type="submit">Continue</button>
         <br>
         <br>
-        
+
 </body>
 </html>
 

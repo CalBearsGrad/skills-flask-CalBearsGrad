@@ -1,61 +1,39 @@
-
-{% extends 'base.html' %}
-
-{% block body %}
-
-
-
-
-<h1 class="heading">Top Melons</h1>
-    <div >
-        <div>
-            <img class="melonimg" src="{{ melon_img }}">
-        </div>
-        <div>
-        <div>
-            <h3 class="heading"></h3>
-            <p> Details on your most loved melons. </p>
-            </div>
-        </div>
-    </div>
-    <div class="melon-details">
-
-        <h3>Product details</h3>
-        <ul>
-            <li>Melon name: {{ melon_name }}</li>
-            <li>How many times folks have 'LOVED' this melon? {{ melon_loved }}</li>
-            
-        </ul>
-    </div>
-
-
-{% endblock %}
-
-
-
-<!--     <img class="melonimg" src="/static/melon1.png">
-    <form action="{{ love-melon }}" method="post">
-    First Name: <input type="text" name="firstname">
-    <br>
-    Last Name: <input type="text" name="lastname">
-    <input type="submit" value="/love-melon">
-    <br>
-    Please pick your Melon Type:
-        <select name="melontype">
-            <option value="cren">Crenshaw</option>
-            <option value="jubi">Junilee Watermelon</option>
-            <option value="sugb">Sugar Baby Watermelon</option>
-            <option value="texb">Texas Golden Watermelon</option>
-        </select>
-            <br>
-            <input type="submit">
-        </form>
-
-<html>
+<!DOCTYPE html>
 <head>
-    <title>Top Melons</title>
-    <link type="text/css" href="/static/styles.css">
-</head>
-<body class="body"> -->
+    <link href="./styles.css" type="text/css" rel="stylesheet">
 
-<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
+</head>
+<html>
+<body class="body">
+    <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
+
+    <h1 class="heading">Ready to LOVE your favorite Melon?</h1>
+ <form>
+    <br>
+    Pick a melon:
+    <select name="melontype">
+        <option value="Crenshaw">Crenshaw</option>
+        <option value="Jubilee Watermelon">Jubilee Watermelon</option>
+        <option value="Sugarbaby Watermelon">Sugarbaby Watermelon</option>
+        <option value="Texas Golden Watermelon">Texas Golden Watermelon</option>
+    </select>
+            <br>
+        </form>
+    <img class="melonimg center" src="http://www.rareseeds.com/assets/1/14/DimThumbnail/Sugar-Baby-Watermelon-web.jpg" alt="cantaloupe">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
