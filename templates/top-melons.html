@@ -1,32 +1,4 @@
 
-
-<!--     <img class="melonimg" src="/static/melon1.png">
-    <form action="{{ love-melon }}" method="post">
-    First Name: <input type="text" name="firstname">
-    <br>
-    Last Name: <input type="text" name="lastname">
-    <input type="submit" value="/love-melon">
-    <br>
-    Please pick your Melon Type:
-        <select name="melontype">
-            <option value="cren">Crenshaw</option>
-            <option value="jubi">Junilee Watermelon</option>
-            <option value="sugb">Sugar Baby Watermelon</option>
-            <option value="texb">Texas Golden Watermelon</option>
-        </select>
-            <br>
-            <input type="submit">
-        </form>
-
-<html>
-<head>
-    <title>Top Melons</title>
-    <link type="text/css" href="/static/styles.css">
-</head>
-<body class="body"> -->
-
-<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
-
    {% for dict_item in parent_dict %}
    {% for key, value in dict_item.items() %}
       <h1>Key: {{key}}</h1>
