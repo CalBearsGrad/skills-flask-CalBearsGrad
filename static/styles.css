@@ -15,7 +15,7 @@
 }
 
 .body {
-    background-color: #FF7F50
+    background-color: #FF7F50;
 }
 
 .melon-div {
@@ -25,8 +25,8 @@
 }
 
 .heading {
-    color: #DC143C
-    font-family: sans-serif
+    color: orange;
+    font-family: sans-serif;
 }
 
 
