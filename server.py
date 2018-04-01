@@ -78,7 +78,7 @@ def top_melons():
         return render_template("top-melons.html", 
             person=request.args.get("person"),
             DICT=MOST_LOVED_MELONS,
-            flavor=nice_thing)
+            flavors=nice_thing)
     else:
         person="Good-looking"
         return render_template("top-melons.html", 
