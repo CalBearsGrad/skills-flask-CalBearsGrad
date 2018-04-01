@@ -24,11 +24,13 @@ so I had to delete them. Sorry.
         <h2>Loved {{ DICT[key]["num_loves"] }} times.
         </h2>
         <img class="melonimg img" src={{ DICT[key]["img"] }}>
-        <h2 class="heading">Just one word ... {{ flavor }}</h2>
+{% endfor %}
+{% for i in flavor %}
+        <h2 class="heading">Just one word ... {{ i }}</h2>
         <br>
     </div>
-
 {% endfor %}
+
 <!-- This used to be the end of the jinja for loop
  -->
     <form method="post" action="/thank-you">
