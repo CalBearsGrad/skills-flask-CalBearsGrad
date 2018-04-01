@@ -44,7 +44,7 @@ def homepage():
 
     if session["person"]:
         return redirect("/top-melons")
-        
+
     else:
         return render_template("/homepage.html")
 
@@ -70,13 +70,15 @@ def top_melons():
         melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
         melon_img = MOST_LOVED_MELONS[key]["img"]
         person = request.args.get("person")
+        DICT = MOST_LOVED_MELONS
 
     if person or session["person"]:
         return render_template("top-melons.html", 
             person=request.args.get("person"),
             melon_name=MOST_LOVED_MELONS[key]["name"], 
             melon_loved=MOST_LOVED_MELONS[key]["num_loves"], 
-            melon_img=MOST_LOVED_MELONS[key]["img"])
+            melon_img=MOST_LOVED_MELONS[key]["img"],
+            DICT=MOST_LOVED_MELONS)
     else:
         person="Good-looking"
         return render_template("top-melons.html", 
