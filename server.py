@@ -59,8 +59,7 @@ def top_melons():
     melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
 
     for value in MOST_LOVED_MELONS:
-        <h1 class="heading">Top Melons</h1>
-        <div >
+        <div>
             <div>
                 <img class="melonimg" src="{{ melon_img }}">
             </div>
