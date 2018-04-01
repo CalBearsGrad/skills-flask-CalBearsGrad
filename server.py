@@ -50,7 +50,8 @@ def homepage():
 
 @app.route("/get-name", methods=["GET"])
 def get_name():
-    """set user's name in session. Button redirects user to top-melons.html"""
+    """set user's name. Button redirects user to top-melons.html"""
+    person=request.args.get("person")
 
     if session["person"]:
         print session

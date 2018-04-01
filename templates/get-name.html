@@ -3,7 +3,7 @@
 {{ super() }}
 {% endblock %}
 <body class="body">
-    <h1 class="heading">Thank you for providing your name.</h1>
+    <h1 class="heading">Thank you {{ person }} for providing your name.</h1>
     <h3 class="heading">Click the button to continue</h3>
     <form method="post" action="/top-melons.html">
         <button type="submit">Continue</button>
