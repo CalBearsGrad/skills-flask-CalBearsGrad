@@ -1,7 +1,7 @@
 from flask import Flask, redirect, request, render_template, session
 from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
-from random import Choice
+from random import choice
 
 
 app = Flask(__name__)
@@ -72,7 +72,7 @@ def top_melons():
     for key in MOST_LOVED_MELONS:
         person = request.args.get("person")
         DICT = MOST_LOVED_MELONS
-        nice_thing = Choice(Flavors)
+        nice_thing = choice(Flavors)
 
     if person or session["person"]:
         return render_template("top-melons.html", 
