@@ -33,9 +33,9 @@ MOST_LOVED_MELONS = {
         'num_loves': 598,
     },
 }
-
-# YOUR ROUTES GO HERE
 from flask import render_template
+# YOUR ROUTES GO HERE
+
 
 @app.route("/", methods=["GET"])
 def homepage():
@@ -43,12 +43,12 @@ def homepage():
     if 'person' in session:
         print session
         print "You're one stepped closer to your most loved melon!"
-        return redirect('/get-name')
+        return render_template('homepage.html')
     else:
         session['person'] = {}
         print session
         flash("You have successfully added your name!")
-        return render_template('/get-name.html')
+        return render_template('/homepage.html')
 
 @app.route("/get-name", methods=["GET"])
 def get_name():
