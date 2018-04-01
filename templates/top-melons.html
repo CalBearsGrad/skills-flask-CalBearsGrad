@@ -1,8 +1,6 @@
-{% extends 'base.html' %}
 
-{% block body %}
 
-    <img class="melonimg" src="/static/melon1.png">
+<!--     <img class="melonimg" src="/static/melon1.png">
     <form action="{{ love-melon }}" method="post">
     First Name: <input type="text" name="firstname">
     <br>
@@ -25,34 +23,14 @@
     <title>Top Melons</title>
     <link type="text/css" href="/static/styles.css">
 </head>
-<body class="body">
+<body class="body"> -->
 
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
-    <h1 class="heading">Top Melons</h1>
-
-    <div >
-
-        <div>
-            <img class="melonimg" src="{{ melon_img }}">
-        </div>
-
-        <div>
-            <div>
-                <h3 class="heading"></h3>
-                <p> Details on your most loved melons. </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="melon-details">
-
-        <h3>Product details</h3>
-        <ul>
-            <li>Melon name: {{ melon_name }}</li>
-            <li>How many times folks have 'LOVED' this melon? {{ melon_loved }}</li>
-            
-        </ul>
-    </div>
-
+   {% for dict_item in parent_dict %}
+   {% for key, value in dict_item.items() %}
+      <h1>Key: {{key}}</h1>
+      <h2>Value: {{value}}</h2>
+   {% endfor %}
+{% endfor %}
 {% endblock %}
