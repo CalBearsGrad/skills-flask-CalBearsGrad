@@ -44,14 +44,15 @@ h6 {
         <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
 
         <h1 class="heading">Please fill in your name</h1>
-
-        <form method="get">
+        </form>
 
             What's your name?
+            <form method="post" action="/top-melon.html">
+        <button type="submit">Continue</button>
             
-            <input type="text" name = request.form["person"] required>
+            <!-- <input type="text" name = request.form["person"] required>
             <br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit"> -->
         </form>
 
     </div>

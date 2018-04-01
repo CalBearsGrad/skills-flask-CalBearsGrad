@@ -10,15 +10,15 @@
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
 {% for key, value in _dict.iteritems() %}
-    <div class='melon-div'>
-        <h3>{{ melon_name }}</h3>
-        <img class="melonimg" src={{ melon_img }} alt="cantaloupe">
-        <h2>Loved {{ melon_loved }} times.</h2>
+    <div>
+        <h2 class="heading">{{ MOST_LOVED_MELONS[key]["name"] }}</h2>
+        <img class="melonimg" src={{ MOST_LOVED_MELONS[key]["img"] }} alt="cantaloupe">
+        <h2>Loved {{ MOST_LOVED_MELONS[key]["num_loves"] }} times.</h2>
         <img src='http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg'>
     </div>
+{% endfor %}
 
 
 </body>
 </html>
 
-{% endfor %}
