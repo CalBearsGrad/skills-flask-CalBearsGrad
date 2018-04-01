@@ -37,16 +37,16 @@ MOST_LOVED_MELONS = {
 # YOUR ROUTES GO HERE
 from flask import render_template
 
-@app.route('/')
+@app.route("/")
 def homepage():
     """render the homepage.html template"""
     if session["person"]:
         return redirect('/get-name')
     else:
-    return render_template("/homepage.html")
+        return render_template("/homepage.html")
 
 
-@app.route('/top-melons')
+@app.route("/top-melons")
 def top_melons():
     """Return page showing the details of a given melon.
 
@@ -60,19 +60,19 @@ def top_melons():
 
     return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
-@app.route('/get-name')
+@app.route("/get-name")
 def get_name():
     """set user's name in session"""
 
     session["person"] = request.args.get("person")
 
-    return redirect("/top-melons.html")
+    return redirect("/top-melons.html")""
 
-@app.route('/love-melon')
+@app.route("/love-melon")
 def love_melon():
     """will post request from top-melons"""
 
-    return redirect("/love-melon")
+    return redirect("/love-melon.html")
 
 if __name__ == "__main__":
 
