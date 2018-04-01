@@ -39,24 +39,26 @@ from flask import render_template
 
 @app.route("/", methods=["GET"])
 def homepage():
-    """render the homepage.html template"""
+    """render the homepage.html template. Button redirects user to get-name.html"""
     
-    return render_template('/homepage.html')
-
-@app.route("/get-name", methods=["GET"])
-def get_name():
-    """set user's name in session"""
-
-    if "person" in session:
-        print session
-        flash("You're one stepped closer to your most loved melon!")
-
+    if session["person"]:
+        return redirect("/top-melons")
     else:
         session['person'] = {}
         print session
         flash("You have successfully added your name!")
+    return render_template('/homepage.html')
 
-    return render_template("/get-name.html")
+@app.route("/get-name", methods=["GET"])
+def get_name():
+    """set user's name in session. Button redirects user to top-melons.html"""
+
+    if session["person"]:
+        print session
+        flash("You're one stepped closer to your most loved melon!")
+        return redirect("/top-melons")
+    else:
+        return redirect("/homepage")
 
 
 @app.route("/top-melons", methods=["POST"])
@@ -71,14 +73,18 @@ def top_melons():
     melon_img = MOST_LOVED_MELONS[key]["img"]
     person = session["person"]
 
+    if person:
+        return render_template("/top-melons.html")
+    else:
+        return redirect("/homepage.html")
+
     return render_template("top-melons.html", person=session["person"],melon_name=MOST_LOVED_MELONS[key]["name"], melon_loved=MOST_LOVED_MELONS[key]["num_loves"], melon_img=MOST_LOVED_MELONS[key]["img"])
 
+@app.route("/thank-you")
+def thank_you():
+    """Return thank-you.html for visiting Ubermelon"""
 
-@app.route("/love-melon")
-def love_melon():
-    """will post request from top-melons"""
-
-    return redirect("/love-melon.html")
+    return render_template("/thank-you.html")
 
 if __name__ == "__main__":
 
