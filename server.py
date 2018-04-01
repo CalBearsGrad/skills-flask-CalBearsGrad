@@ -53,13 +53,14 @@ def top_melons():
 
     Show all info about a melon.
     """
-    for value in MOST_LOVED_MELONS:
-        melon_name = request.args.get("MOST_LOVED_MELONS['name']")
-        melon_image = request.args.get("MOST_LOVED_MELONS['img']")
-        melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
 
-        
-    return render_template("/top-melons.html")
+    for key in MOST_LOVED_MELONS:
+        melon_name = MOST_LOVED_MELONS[key]["name"]
+        melon_loved = MOST_LOVED_MELONS[key]["num_loves"]
+        melon_img = MOST_LOVED_MELONS[key]["img"]
+
+    print melon_name
+    return render_template("top-melons.html")
 
 @app.route('/get-name')
 def get_name():

@@ -1,26 +1,21 @@
-{ extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Melons</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
 
-{% for VAR in DICT %}
+<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
-    melon_name = request.args.get("MOST_LOVED_MELONS['name']")
-    melon_image = request.args.get("MOST_LOVED_MELONS['img']")
-    melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
+{% for %}
+    <div class='melon-div'>
+        <h3>{{ melon_name }}</h3>
+        <img class="melonimg" src={{ melon_img }} alt="cantaloupe">
+        <h2>Loved {{ melon_loved }} times.</h2>
+        <img src='http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg'>
+    </div>
 
-<img class="melonimg" src="{{ melon_img }}">
-        <div>
-        <div>
-            <h3 class="heading"></h3>
-            <p> Details on your most loved melons. </p>
-        </div>
-        </div>
-        <div>
-            <h3>Product details</h3>
-            <ul>
-                <li>Melon name: {{ melon_name }}</li>
-                <li>The number of times folks have LOVED this melon: {{ melon_loved }}</li>
-            </ul>
-        </div>
 
-{% endfor %}
-    {% endblock %}
+</body>
+</html>
