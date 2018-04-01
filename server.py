@@ -40,21 +40,21 @@ from flask import render_template
 @app.route("/", methods=["GET"])
 def homepage():
     """render the homepage.html template"""
-    if 'person' in session:
+    
+        return render_template('/homepage.html')
+
+@app.route("/get-name", methods=["GET"])
+def get_name():
+    """set user's name in session"""
+
+    if "person" in session:
         print session
-        print "You're one stepped closer to your most loved melon!"
-        return render_template('homepage.html')
+        flash("You're one stepped closer to your most loved melon!")
+        
     else:
         session['person'] = {}
         print session
         flash("You have successfully added your name!")
-        return render_template('/homepage.html')
-
-@app.route("/get-name")
-def get_name():
-    """set user's name in session"""
-
-    #session["person"] = request.args.get("person")
 
     return render_template("/get-name.html")
 
