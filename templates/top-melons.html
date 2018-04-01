@@ -31,7 +31,7 @@ MOST_LOVED_MELONS = {
 
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
 
-{% for key, value in MOST_LOVED_MELONS.iteritems() %}
+{% for key, value in _dict.iteritems() %}
     <div class='melon-div'>
         <h3>{{ melon_name }}</h3>
         <img class="melonimg" src={{ melon_img }} alt="cantaloupe">
