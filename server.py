@@ -71,7 +71,7 @@ def top_melons():
     for key in MOST_LOVED_MELONS:
         person = request.args.get("person")
         DICT = MOST_LOVED_MELONS
-        nice_thing = choice(Flavors)
+        nice_thing = Choice(Flavors)
 
     if person or session["person"]:
         return render_template("top-melons.html", 
