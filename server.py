@@ -46,7 +46,6 @@ def homepage():
     else:
         session['person'] = {}
         print session
-        flash("You have successfully added your name!")
     return render_template('/homepage.html')
 
 @app.route("/get-name", methods=["GET"])
