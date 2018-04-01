@@ -53,7 +53,7 @@ def get_name():
     """set user's name. Button redirects user to top-melons.html"""
     person=request.args.get("person")
 
-    if session["person"]:
+    if person:
         print session
         flash("You're one stepped closer to your most loved melon!")
         return redirect("/top-melons")
