@@ -42,9 +42,9 @@ def homepage():
     """render the homepage.html template"""
 
     if session['get_name']:
-        redirect("/top-melons.html")
+        return redirect("/top-melons.html")
     else:
-        render_template("/top-melons.html")
+        return render_template("/top-melons.html")
 
 
 @app.route('/top-melons')
@@ -53,28 +53,13 @@ def top_melons():
 
     Show all info about a melon.
     """
-
-    melon_name = request.args.get("MOST_LOVED_MELONS['name']")
-    melon_image = request.args.get("MOST_LOVED_MELONS['img']")
-    melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
-
     for value in MOST_LOVED_MELONS:
+        melon_name = request.args.get("MOST_LOVED_MELONS['name']")
+        melon_image = request.args.get("MOST_LOVED_MELONS['img']")
+        melon_loved = request.args.get("MOST_LOVED_MELONS['num_loves']")
 
-        <img class="melonimg" src="{{ melon_img }}">
-        <div>
-        <div>
-            <h3 class="heading"></h3>
-            <p> Details on your most loved melons. </p>
-        </div>
-        </div>
-        <div>
-            <h3>Product details</h3>
-            <ul>
-                <li>Melon name: {{ melon_name }}</li>
-                <li>The number of times folks have LOVED this melon: {{ melon_loved }}</li>
-            </ul>
-        </div>
-    return render_template("top-melons.html")
+        
+    return render_template("/top-melons.html")
 
 @app.route('/get-name')
 def get_name():
