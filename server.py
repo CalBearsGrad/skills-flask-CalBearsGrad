@@ -88,27 +88,28 @@ def top_melons():
             melon_img=MOST_LOVED_MELONS[key]["img"])
 
     
-@app.route("/thank-you", methods=["GET", "POST"])
-def thank_you():
-    """Return thank-you.html for visiting Ubermelon"""
+# @app.route("/thank-you", methods=["GET", "POST"])
+# def thank_you():
+#     """Return thank-you.html for visiting Ubermelon"""
 
-    person=session["person"]
+#     person=session["person"]
 
-    return render_template("thank-you.html", 
-    person=session["person"])
+#     return render_template("thank-you.html", 
+#     person=session["person"])
 
 @app.route("/love-melon", methods=["GET", "POST"])
 def love_melon():
     """Takes user's selection from drop down menu in top-melons,
-     increases the number of times that melon has been love din 
+     increases the number of times that melon has been loved in 
      the dictionary, and then renders the template thank-you.html"""
 
     melon_id=request.args.get("melon_id")
     person=request.args.get("person")
 
-    if melon_id == MOST_LOVED_MELONS[melon_id]:
-        MOST_LOVED_MELONS[melon_id]["num_loves"] += 1
-        print MOST_LOVED_MELONS[melon_id]["num_loves"]
+    for key in MOST_LOVED_MELONS:
+        if melon_id in MOST_LOVED_MELONS:
+            MOST_LOVED_MELONS[melon_id]["num_loves"] += 1
+            print MOST_LOVED_MELONS[melon_id]["num_loves"]
 
     return render_template("thank-you.html", 
     person=request.args.get("person"),
