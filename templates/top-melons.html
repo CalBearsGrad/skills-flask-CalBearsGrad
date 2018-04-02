@@ -36,7 +36,7 @@ so I had to delete them. Sorry.
 {% endfor %}
         <h2 class="heading">Just one word... </h2>
 {% for flavor in flavors %}
-        <h2 class="heading">               {{ flavor }}</h2>
+        <h2 class="heading">{{ flavor }}</h2>
         <br>
     </div>
 {% endfor %}
@@ -46,10 +46,29 @@ so I had to delete them. Sorry.
  -->
     <form method="post" action="/thank-you">
         <button type="submit">Continue</button>
+    </form>
         <br>
         <br>
-
+        <br>
+        <br>
+        <br>
+    <h1 class="heading">Ready to LOVE your favorite Melon?</h1>
+    <form method="post" action="/love-melon">
+    <br>
+    Pick a melon:
+    <select name="melon_id">
+        <option value="cren">Crenshaw</option>
+        <option value="jubi">Jubilee Watermelon</option>
+        <option value="sugb">Sugarbaby Watermelon</option>
+        <option value="texb">Texas Golden Watermelon</option>
+    </select>
+    <br>
+    </form>
+    <button type="submit">LOVE that Good Melon</button>
 </body>
+<footer>
+    <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
+</footer>
 </html>
 
 
