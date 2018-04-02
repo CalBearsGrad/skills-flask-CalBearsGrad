@@ -100,16 +100,16 @@ def love_melon():
      increases the number of times that melon has been love din 
      the dictionary, and then renders the template thank-you.html"""
 
-     melon_id=request.args.get("melon_id")
-     person=request.args.get("person")
+    melon_id=request.args.get("melon_id")
+    person=request.args.get("person")
 
-     if melon_id == MOST_LOVED_MELONS[melon_id]:
+    if melon_id == MOST_LOVED_MELONS[melon_id]:
         MOST_LOVED_MELONS[melon_id]["num_loves"] += 1
         print MOST_LOVED_MELONS[melon_id]["num_loves"]
-        
-        return render_template("thank-you.html", 
-            person=request.args.get("person"),
-            melon_id=request.args.get("melon_id"))
+
+    return render_template("thank-you.html", 
+    person=request.args.get("person"),
+    melon_id=request.args.get("melon_id"))
 
 if __name__ == "__main__":
 
