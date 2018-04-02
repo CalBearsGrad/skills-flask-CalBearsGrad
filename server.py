@@ -92,10 +92,10 @@ def top_melons():
 def thank_you():
     """Return thank-you.html for visiting Ubermelon"""
 
-    person=request.args.get("person")
+    person=session["person"]
 
     return render_template("thank-you.html", 
-    person=request.args.get("person"))
+    person=session["person"])
 
 @app.route("/love-melon", methods=["GET", "POST"])
 def love_melon():
