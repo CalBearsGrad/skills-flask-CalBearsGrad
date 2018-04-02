@@ -96,7 +96,7 @@ def thank_you():
         person=request.args.get("person")
 
     return render_template("thank-you.html", 
-    person=session["person"])
+    person=request.args.get("person"))
 
 @app.route("/love-melon", methods=["GET", "POST"])
 def love_melon():
