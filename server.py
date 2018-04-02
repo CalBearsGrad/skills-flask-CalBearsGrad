@@ -92,7 +92,7 @@ def top_melons():
 def thank_you():
     """Return thank-you.html for visiting Ubermelon"""
 
-    if person=session["person"] == None:
+    if session["person"] == None:
         person=request.args.get("person")
 
     return render_template("thank-you.html", 
