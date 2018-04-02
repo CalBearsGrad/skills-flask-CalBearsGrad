@@ -11,11 +11,100 @@
     </div>
 </head>
 {% endblock %}
+{% set active_item = 'home' %}
+
+<body class="body">
+    <h1>UberMelon's Most Loved Melons.</h1>
+    <div>
+    <div>
+        <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
+
+        <h1 class="heading">Please fill in your name</h1>
+        <form action="/top-melons">
+
+     What's your name?
+     <input type="text" name="person"><br>
+            <br>
+        <form method="post" action="/top-melons">
+        <button type="submit">Continue</button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
+
+{% {% set active_item = 'top-melons' %} %}
+<body class="body">
+
+    <h1 class="heading">Welcome {{ person }}!</h1>
+<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
+
+<!-- This for loop kept throwing errors in the debugger, so I commented it out. It continued to throw errors so I had to delete it :( -->
+
+{% for key, value in DICT.items() %}
+    <div>
+        <h3 class="heading">{{ person }}, this is {{ DICT[key]["name"] }}</h3>
+        <h2 class="heading">Loved {{ DICT[key]["num_loves"] }} times.
+        </h2>
+        <img     
+            border-width: 2px;
+            border-style: solid;
+            border-color: #008000;
+            height: 200px;
+            width: 200px;
+            class="melonimg img" src={{ DICT[key]["img"] }}>
+{% endfor %}
+        <h2 class="heading">Just one word... </h2>
+{% for flavor in flavors %}
+        <h2 class="heading">{{ flavor }}</h2>
+        <br>
+    </div>
+{% endfor %}
+    <h2 class="heading">Just ... {{ flavors }}</h2>
+
+<!-- This used to be the end of the jinja for loop
+ -->
+    <form method="post" action="/">
+        <button type="submit">Try Again</button>
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <h1 class="heading">Ready to LOVE your favorite Melon?</h1>
+    <form method="submit" action="/love-melon", "/thank-you">
+    <br>
+    Pick a melon:
+    <select name="melon_id">
+        <option value= "none" >Choose a melon</option>
+        <option value="cren">Crenshaw</option>
+        <option value="jubi">Jubilee Watermelon</option>
+        <option value="sugb">Sugarbaby Watermelon</option>
+        <option value="texb">Texas Golden Watermelon</option>
+    </select>
+        <!-- <button type="submit">LOVE that Good Melon</button> -->
+    <br>
+    <br>
+    </form>
+    <form action="/thank-you">
+        What's your name again?
+        <input type="text" name="person"><br>
+        <br>
+        <form method="post" action="/thank-you">
+        <button type="submit">Continue</button>
+        </form>
+</body>
 
 
-
-
-
+{% endblock %}
+{% {% set active_item = 'thank-you' %} %}
+<body>
+    <h1>Thank you {{ person }} for visiting Uber Melon! Visit again soon!</h1>
+    <br>
+    <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
+</body>
+{% endblock %}
 {% block footer %}
 <footer>
     <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
