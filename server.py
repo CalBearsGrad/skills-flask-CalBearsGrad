@@ -41,7 +41,7 @@ from flask import render_template
 # YOUR ROUTES GO HERE
 
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET", "POST"])
 def homepage():
     """render the homepage.html template. Button redirects user to get-name.html"""
     person=request.args.get("person")
