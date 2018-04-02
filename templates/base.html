@@ -1,16 +1,23 @@
 
 <!DOCTYPE html>
 <html>
-{% blockhead %}
+{% block head %}
 <head>
     <link href="static/styles.css" type="text/css" rel="stylesheet">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="/thank-you?person=Good Looking">Thank You</a>
+      <a href="/top-melons?person=Good Looking">Top Melons</a>
+    </div>
 </head>
 {% endblock %}
 <body class="body">
 
 </body>
+{% block footer %}
 <footer>
     <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
 </footer>
+{% endblock %}
 </html>
 

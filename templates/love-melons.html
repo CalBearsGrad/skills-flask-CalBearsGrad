@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block head %
+{{ super() }}}
 <head>
-    <link href="static/styles.css" type="text/css" rel="stylesheet">
-    <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="/thank-you">Thank You</a>
-    </div>
+    
 </head>
+{%  endblock %}
 <html>
 <body class="body">
     <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
@@ -24,9 +23,12 @@
     </form>
     <button type="submit">LOVE that Good Melon</button>
 </body>
+{% block footer%}
+{{ super() }}
 <footer>
     <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
 </footer>
+{% endblock %}
 </html>
 
 

@@ -1,52 +1,15 @@
-<!-- 
-I kept getting errors in debugger about my attempt to extend the bse template so I commented it out. But it kept throwing errors even when it was commented out, so I deleted them
--->
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block head %
+{{ super() }}}
 <head>
-    <link href="static/styles.css" type="text/css" rel="stylesheet">
+    
 </head>
-<head>
-    <link href="./styles.css" type="text/css" rel="stylesheet">
-    <h1>UberMelon's Most Loved Melons.</h1>
-    <style>
-h1 {
-    color: #800000
-    font-family: Arial
-}
-
-h2 {
-    color: #800000
-    font-family: sans-serif
-}
-
-h3 {
-    color: #800000
-    font-family: sans-serif
-}
-
-h4 {
-    color: #800000
-    font-family: sans-serif
-}
-
-h5 {
-    color: #800000
-    font-family: sans-serif
-}
-
-h6 {
-    color: #800000
-    font-family: sans-serif
-}
-    </style>
-</head>
-
+{%  endblock %}
 
 <body class="body">
-
-<div>
+    <h1>UberMelon's Most Loved Melons.</h1>
     <div>
-
+    <div>
         <img class="melonimg center" src="/static/melon1.png" alt="cantaloupe">
 
         <h1 class="heading">Please fill in your name</h1>
@@ -61,10 +24,11 @@ h6 {
 
     </div>
 </div>
-
+{% block footer%}
+{{ super() }}
 <footer>
     <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
 </footer>
-
+{% endblock %}
 </body>
 </html>
