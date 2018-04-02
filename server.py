@@ -88,14 +88,15 @@ def top_melons():
             melon_img=MOST_LOVED_MELONS[key]["img"])
 
     
-# @app.route("/thank-you", methods=["GET", "POST"])
-# def thank_you():
-#     """Return thank-you.html for visiting Ubermelon"""
+@app.route("/thank-you", methods=["GET", "POST"])
+def thank_you():
+    """Return thank-you.html for visiting Ubermelon"""
 
-#     person=session["person"]
+    if person=session["person"] == None:
+        person=request.args.get("person")
 
-#     return render_template("thank-you.html", 
-#     person=session["person"])
+    return render_template("thank-you.html", 
+    person=session["person"])
 
 @app.route("/love-melon", methods=["GET", "POST"])
 def love_melon():
