@@ -53,7 +53,7 @@ so I had to delete them. Sorry.
         <br>
         <br>
     <h1 class="heading">Ready to LOVE your favorite Melon?</h1>
-    <form method="post" action="/love-melon">
+    <form method="post" action="/love-melon", "/thank-you">
     <br>
     Pick a melon:
     <select name="melon_id">
@@ -62,16 +62,17 @@ so I had to delete them. Sorry.
         <option value="sugb">Sugarbaby Watermelon</option>
         <option value="texb">Texas Golden Watermelon</option>
     </select>
-    <br>
-    <br>
-    </form>
-    <form method="post" action="/thank-you">
-        You name is: {{ person }}
-        <input type="checkbox" name={{ person }} value={{ person }}>
-        <br>
-        <br>
         <button type="submit">LOVE that Good Melon</button>
+    <br>
+    <br>
     </form>
+    <form action="/thank-you">
+        What's your name again?
+        <input type="text" name="person"><br>
+        <br>
+        <form method="post" action="/thank-you">
+        <button type="submit">Continue</button>
+        </form>
 </body>
 <footer>
     <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
