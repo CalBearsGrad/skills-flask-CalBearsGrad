@@ -1,6 +1,5 @@
-{% extends "base.html" %}
-{% block head %}
-{{ super() }}
+<!DOCTYPE html>
+<html>
 <head>
     <link href="static/styles.css" type="text/css" rel="stylesheet">
     <div class="topnav">
@@ -9,9 +8,9 @@
       <a href="/top-melons?person=Good Looking">Top Melons</a>
     </div>
 </head>
-{%  endblock %}
-{% home block %}
-{{ super() }}
+
+
+
 <body class="body">
     <h1>UberMelon's Most Loved Melons.</h1>
     <div>
@@ -30,10 +29,9 @@
 
     </div>
 </div>
-{%  endblock %}
-{% block footer%}
-{{ super() }}
 
-{% endblock %}
 </body>
+<footer>
+    <p>Copyright Marijane at UberMelon 2018. All rights reserved.</p>
+</footer>
 </html>
