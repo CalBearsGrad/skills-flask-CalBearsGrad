@@ -106,10 +106,10 @@ def love_melon():
     melon_id=request.args.get("melon_id")
     person=request.args.get("person")
 
-    for key in MOST_LOVED_MELONS:
-        if melon_id in MOST_LOVED_MELONS:
-            MOST_LOVED_MELONS[melon_id]["num_loves"] += 1
-            print MOST_LOVED_MELONS[melon_id]["num_loves"]
+    # for key in MOST_LOVED_MELONS:
+    if melon_id in MOST_LOVED_MELONS:
+        MOST_LOVED_MELONS[melon_id]["num_loves"] += 1
+        print MOST_LOVED_MELONS[melon_id]["num_loves"]
 
     return render_template("thank-you.html", 
     person=request.args.get("person"),
