@@ -71,8 +71,7 @@ def top_melons():
     """
     for key in MOST_LOVED_MELONS:
         person = request.args.get("person")
-        #print request.get_data().get("person")
-        print type(request.get_data())
+        print request.form["person"]
         DICT = MOST_LOVED_MELONS
         nice_thing = choice(Flavors)
 
