@@ -70,20 +70,19 @@ def top_melons():
     Show all info about a melon.
     """
     for key in MOST_LOVED_MELONS:
-        person = request.args.get("person")
-        print request.form["person"]
+        person = request.form["person"]
         DICT = MOST_LOVED_MELONS
         nice_thing = choice(Flavors)
 
     if person or session["person"]:
         return render_template("top-melons.html", 
-            person=request.args.get("person"),
+            person=request.form["person"],
             DICT=MOST_LOVED_MELONS,
             flavors=nice_thing)
     else:
         person="Good-looking"
         return render_template("top-melons.html", 
-            person=request.args.get("person"),
+            person=request.form["person"],
             DICT=MOST_LOVED_MELONS,
             flavors=nice_thing)
 
