@@ -85,7 +85,8 @@ def top_melons():
             person=request.args.get("person"),
             melon_name=MOST_LOVED_MELONS[key]["name"], 
             melon_loved=MOST_LOVED_MELONS[key]["num_loves"], 
-            melon_img=MOST_LOVED_MELONS[key]["img"])
+            melon_img=MOST_LOVED_MELONS[key]["img"],
+            DICT=MOST_LOVED_MELONS)
 
     
 @app.route("/thank-you", methods=["GET", "POST"])
